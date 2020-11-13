@@ -1,7 +1,7 @@
 import Cocoa
 
 @IBDesignable
-public final class CircularProgress: NSView {
+@objc public final class CircularProgress: NSView {
 	private lazy var radius = bounds.width < bounds.height ? bounds.midX * 0.8 : bounds.midY * 0.8
 	private var _progress: Double = 0
 	private var progressObserver: NSKeyValueObservation?
@@ -326,7 +326,7 @@ public final class CircularProgress: NSView {
 	/**
 	Triggers when the progress was cancelled succesfully.
 	*/
-	public var onCancelled: (() -> Void)?
+    @objc public var onCancelled: (() -> Void)?
 
 	private var _isCancellable = false
 	/**
@@ -389,7 +389,7 @@ public final class CircularProgress: NSView {
 	/**
 	Supply the base color to use for displaying the cancelled state.
 	*/
-	public var cancelledStateColorHandler: ((NSColor) -> NSColor)?
+    @objc public var cancelledStateColorHandler: ((NSColor) -> NSColor)?
 
 	private func visualizeCancelledStateIfNecessary() {
 		guard visualizeCancelledState else {

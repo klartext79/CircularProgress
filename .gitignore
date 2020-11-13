@@ -3,3 +3,4 @@
 xcuserdata
 project.xcworkspace
 /.swiftpm
+.DS_Store
