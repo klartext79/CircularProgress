@@ -377,6 +377,7 @@ import Cocoa
 				onCancelled?()
 				visualizeCancelledStateIfNecessary()
 				isIndeterminate = true
+				progressLabel.isHidden = true
 			}
 		}
 	}
