@@ -376,7 +376,7 @@ import Cocoa
 			if newValue {
 				onCancelled?()
 				visualizeCancelledStateIfNecessary()
-				isIndeterminate = false
+				isIndeterminate = true
 			}
 		}
 	}
